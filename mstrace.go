@@ -17,7 +17,6 @@ func NewMSTrace() *MSTrace {
 }
 
 func FreeMSTrace(t *MSTrace) {
-	fmt.Printf("free trace\n")
 	C.mst_free((**_Ctype_struct_MSTrace_s)((unsafe.Pointer)(&t)))
 }
 
