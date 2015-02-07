@@ -1,4 +1,4 @@
-== go wrapper for libmseed ==
+## go wrapper for libmseed ##
 
 http://ds.iris.edu/ds/nodes/dmc/software/downloads/libmseed/
 
