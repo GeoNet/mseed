@@ -1,6 +1,7 @@
 package mseed
 
-//#cgo LDFLAGS: -lmseed
+//#cgo CFLAGS: -I/usr/local/include
+//#cgo LDFLAGS: /usr/local/lib/libmseed.a
 //#include <libmseed.h>
 import "C"
 
