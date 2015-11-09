@@ -28,3 +28,11 @@ func (g *MSTraceGroup) AddMSRtoGroup(m *MSRecord, dataquality int, timetol float
 func (g *MSTraceGroup) PrintTraceList(timeformat int, details int, gaps int) {
 	C.mst_printtracelist((*_Ctype_struct_MSTraceGroup_s)(g), C.flag(timeformat), C.flag(details), C.flag(gaps))
 }
+
+func (g *MSTraceGroup) First() *MSTrace {
+	return (*MSTrace)(C.mst_groupfirst((*_Ctype_struct_MSTraceGroup_s)(g)))
+}
+
+func (t *MSTrace) Next() *MSTrace {
+	return (*MSTrace)(C.mst_groupnext((*_Ctype_struct_MSTrace_s)(t)))
+}
